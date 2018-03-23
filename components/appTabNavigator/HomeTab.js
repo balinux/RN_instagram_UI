@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet,Button } from 'react-native';
 import { Constants } from 'expo';
-import { Icon, Container, Content } from 'native-base';
+import { Card, Icon, Container, Content } from 'native-base';
 // You can import from local files
-// import CardComponent from '../CardComponent';
+import CardComponent from '../CardComponent';
 // or any pure javascript modules available in npm
 // import { Card } from 'react-native-elements'; // Version can be specified in package.json
 
@@ -17,16 +17,13 @@ export default class HomeTab extends Component {
   
   render() {
     return (
-      <View style={styles.container}>
-        <Text>HomeScreenku</Text>
-      </View>
-    //   <Container>
-    //     <Content>
-    //       <CardComponent imageSource= "2"/>
-    //       <CardComponent imageSource= "1"/>
-    //       <CardComponent imageSource= "3"/>
-    //     </Content>
-    //   </Container>      
+      <Container>
+        <Content>
+            <CardComponent imagesource="1"/>
+            <CardComponent imagesource="2"/>
+            <CardComponent imagesource="3"/>
+        </Content>
+      </Container>      
     );
   }
 }
